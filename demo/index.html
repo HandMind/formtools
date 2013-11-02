@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="../min/formtools.js"></script>
+	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="js/demo.js"></script>
+	<link rel="stylesheet" href="css/demo.css"/>
+	<meta charset="utf-8">
+</head>
+<body>
+	<main>
+		<h3>Simple demo</h3>
+		<p>
+			Every element in this form has <strong>required</strong> attribute.
+		</p>
+		<form>
+			<fieldset>
+				<div class="field">
+					<textarea placeholder="Textarea" required></textarea>
+				</div>
+				<div class="field">
+					<input type="text" placeholder="Text" required>
+				</div>
+				<div class="field">
+					<input id="form-checkbox" type="checkbox" required>
+					<label for="form-checkbox">Checkbox</label>
+				</div>
+				<div class="field">
+					<input data-field-name="Radio" id="radio1" type="radio" name="radio" value="1" required>
+					<label for="radio1">Radio 1</label>
+					<input type="radio" name="radio" id="radio2" value="2">
+					<label for="radio2">Radio 2</label>
+					<input type="radio" name="radio" id="radio3" value="3">
+					<label for="radio3">Radio 3</label>
+				</div>
+				<div class="field">
+					<select data-field-name="Select" name="select" required>
+						<option value="" selected disabled>Select</option>
+						<option value="1">Option 1</option>
+						<option value="2">Option 2</option>
+						<option value="3">Option 3</option>
+					</select>
+				</div>
+				<div class="field">
+					<label for="file-upload">File</label>
+					<input type="file" name="file" id="file-upload" required>
+				</div>
+				<div class="field">
+					<input type="submit" value="Send" class="disabled">
+				</div>
+				<div class="form-notice">
+				</div>
+			</fieldset>
+		</form>
+	</main>
+</body>
+</html>

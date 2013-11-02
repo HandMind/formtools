@@ -1,0 +1,54 @@
+// Variables and colors
+@white:										#fff;
+
+@input-placeholder-color:					#aaa;
+@input-invalid-placeholder-color:			#a55;
+
+@placeloder-class:							placeholder;
+@invalid-class:								invalid;
+
+// ------------------------------------------ //
+
+.placeholder-color(@color) {
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+	&:-moz-placeholder {
+		color: @color;
+	}
+	&::-moz-placeholder {
+		color: @color;
+	}
+	&:-ms-input-placeholder {  
+		color: @color;
+	}
+	&.@{placeloder-class} {
+		color: @color;
+	}
+}
+
+form {
+	.field {
+		border: 1px solid transparent;
+		[placeholder] {
+			.placeholder-color(@input-placeholder-color);
+		}
+		[placeholder]:focus {
+			.placeholder-color(@white);
+		}
+		&.@{invalid-class} {
+			background: lighten(red, 30%);
+			border: 1px solid rgb(200, 140, 140);
+			[placeholder] {
+				.placeholder-color(@input-invalid-placeholder-color);
+			}
+			[placeholder]:focus {
+				.placeholder-color(@white);
+			}
+		}
+		[required] {
+			// prevent default browser behaviour;
+			box-shadow: none;
+		}
+	}
+}

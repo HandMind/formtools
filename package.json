@@ -1,0 +1,19 @@
+{
+  "author": "Vladislav Ivanov",
+  "name": "jquery.formtools",
+  "version": "0.9.1",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-uglify": "~0.2.5",
+    "grunt-contrib-less": "~0.8.1",
+    "grunt-contrib-jshint": "~0.7.1",
+    "grunt-contrib-copy": "~0.4.1",
+    "clean-css": "~1.1.7"
+  },
+  "description": "*formtools.js* is a polyfill and helper library for **placeholder** and **required** form field attributes.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "BSD-2-Clause"
+}
