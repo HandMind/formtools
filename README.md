@@ -2,6 +2,10 @@
 
 *formtools.js* is a polyfill and helper library for **placeholder** and **required** form field attributes.
 
+##Demo##
+
+[View demo][1]
+
 ##Usage##
 
     $("#form").formtools(options);
@@ -38,3 +42,5 @@ Ensure that you have Node.js and npm installed.
  1. Fork and clone the repository.
  2. run `npm install` to install all development dependencies.
  3. run `grunt`
+ 
+  [1]: http://handmind.github.io/formtools/demo.html
