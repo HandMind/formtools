@@ -218,3 +218,8 @@ pip-log.txt
 ## Node.js
 #############
 node_modules/
+
+#############
+## Github Pages
+#############
+gh-pages/
