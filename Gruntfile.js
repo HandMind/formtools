@@ -3,28 +3,28 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		less: {
-			demo: {
+			docs: {
 				options: {
 					cleancss: true
 				},
 				files: {
-					"demo/css/demo.css": ["source/demo/less/demo.less"]
+					"source/gh-pages/css/demo.css": ["source/gh-pages/_assets/less/demo.less"],
+					"source/gh-pages/css/styles.css": ["source/gh-pages/_assets/less/styles.less"]
 				}
 			}
 		},
 
 		copy: {
-			demo: {
+			docs: {
 				files: [{
 					expand: true,
-					cwd: "source/demo/js/",
-					src: '*',
-					dest: 'demo/js/'
+					cwd: "min/",
+					src: 'formtools.js',
+					dest: 'source/gh-pages/js/'
 				}, {
 					expand: true,
-					cwd: "source/demo/",
-					src: 'index.html',
-					dest: 'demo/'
+					src: 'README.md',
+					dest: 'source/gh-pages/_includes/'
 				}]
 			},
 			main: {
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 			main: [
 				'min/formtools.js'
 			],
-			demo: [
+			docs: [
 				'demo/js/demo.js'
 			]
 		},
@@ -68,6 +68,15 @@ module.exports = function(grunt) {
 					'min/formtools.js': ['source/formtools.js']
 				}
 			}
+		},
+		
+		jekyll: {
+			docs: { 
+				options: {
+					src: 'source/gh-pages',
+					dest: 'gh-pages'
+				}
+			}
 		}
 	});
 
@@ -75,6 +84,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-jekyll');
 	
-	grunt.registerTask('default', ['less', 'copy', 'jshint', 'uglify']);
+	grunt.registerTask('default', ['copy:main', 'jshint:main', 'uglify']);
+	grunt.registerTask('docs', ['less:docs', 'copy:docs', 'jshint:docs', 'jekyll']);
 };
