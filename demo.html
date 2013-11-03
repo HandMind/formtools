@@ -1,58 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>demo page &mdash; formtools.js</title>
+	
+	<link rel="stylesheet" href="css/styles.css">
+	
+	<link rel="stylesheet" href="css/demo.css">
+	
+	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="javascripts/formtools.js"></script>
-	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<script src="javascripts/demo.js"></script>
-	<link rel="stylesheet" href="stylesheets/demo.css"/>
-	<meta charset="utf-8">
-</head>
-<body>
-	<main>
+	
+    
+	<script src="js/formtools.js"></script>
+	
+	<script src="js/demo.js"></script>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="index.html">Formtools</a></h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/HandMind/formtools">View the Project on GitHub <small>HandMind/formtools</small></a></p>
+        <ul>
+          <li><a href="https://github.com/HandMind/formtools/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/HandMind/formtools/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/HandMind/formtools">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+	  
 		<h3>Simple demo</h3>
-		<p>
-			Every element in this form has <strong>required</strong> attribute.
-		</p>
-		<form>
-			<fieldset>
-				<div class="field">
-					<textarea placeholder="Textarea" required></textarea>
-				</div>
-				<div class="field">
-					<input type="text" placeholder="Text" required>
-				</div>
-				<div class="field">
-					<input id="form-checkbox" type="checkbox" required>
-					<label for="form-checkbox">Checkbox</label>
-				</div>
-				<div class="field">
-					<input data-field-name="Radio" id="radio1" type="radio" name="radio" value="1" required>
-					<label for="radio1">Radio 1</label>
-					<input type="radio" name="radio" id="radio2" value="2">
-					<label for="radio2">Radio 2</label>
-					<input type="radio" name="radio" id="radio3" value="3">
-					<label for="radio3">Radio 3</label>
-				</div>
-				<div class="field">
-					<select data-field-name="Select" name="select" required>
-						<option value="" selected disabled>Select</option>
-						<option value="1">Option 1</option>
-						<option value="2">Option 2</option>
-						<option value="3">Option 3</option>
-					</select>
-				</div>
-				<div class="field">
-					<label for="file-upload">File</label>
-					<input type="file" name="file" id="file-upload" required>
-				</div>
-				<div class="field">
-					<input type="submit" value="Send" class="disabled">
-				</div>
-				<div class="form-notice">
-				</div>
-			</fieldset>
-		</form>
-	</main>
-</body>
+<p>
+	Every element in this form has <strong>required</strong> attribute.
+</p>
+<form>
+	<fieldset>
+		<div class="field">
+			<textarea placeholder="Textarea" required></textarea>
+		</div>
+		<div class="field">
+			<input type="text" placeholder="Text" required>
+		</div>
+		<div class="field">
+			<input id="form-checkbox" type="checkbox" required>
+			<label for="form-checkbox">Checkbox</label>
+		</div>
+		<div class="field">
+			<input data-field-name="Radio" id="radio1" type="radio" name="radio" value="1" required>
+			<label for="radio1">Radio 1</label>
+			<input type="radio" name="radio" id="radio2" value="2">
+			<label for="radio2">Radio 2</label>
+			<input type="radio" name="radio" id="radio3" value="3">
+			<label for="radio3">Radio 3</label>
+		</div>
+		<div class="field">
+			<select data-field-name="Select" name="select" required>
+				<option value="" selected disabled>Select</option>
+				<option value="1">Option 1</option>
+				<option value="2">Option 2</option>
+				<option value="3">Option 3</option>
+			</select>
+		</div>
+		<div class="field">
+			<label for="file-upload">File</label>
+			<input type="file" name="file" id="file-upload" required>
+		</div>
+		<div class="field">
+			<input type="submit" value="Send" class="disabled">
+		</div>
+		<div class="form-notice">
+		</div>
+	</fieldset>
+</form>
+		
+      </section>
+	  <footer>
+        <p>This project is maintained by <a href="https://github.com/HandMind">HandMind</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
 </html>
