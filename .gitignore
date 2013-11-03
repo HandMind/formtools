@@ -220,11 +220,6 @@ pip-log.txt
 node_modules/
 
 #############
-## Github Pages
-#############
-/gh-pages/
-
-#############
 ## Gemfile
 #############
 source/gh-pages/Gemfile.lock
