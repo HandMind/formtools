@@ -1,35 +1,5 @@
 @import "variables.less";
 
-// Layout
-
-html {
-    background: @page-background-color;
-}
-
-body {
-    font: @page-font-size Arial, sans-serif;
-    color: @page-font-color;
-    max-width: 700px;
-    overflow-x: hidden;
-    background: white;
-    margin: @page-line-height auto;
-	padding: @page-line-height (@page-line-height * @golden-ratio);
-	border: 4px solid darken(@page-background-color, 10%);
-	font-family: "Georgia",Verdana,Helvetica,Arial,sans-serif;
-}
-
-// Headings
-
-h3 {
-   font-size: (@page-font-size * sqrt(2));
-   margin: (@page-paragraph-margin * sqrt(2)) 0;
-}
-
-h2 { 
-   font-size: (@page-font-size * 2);
-   margin: (@page-paragraph-margin * 2) 0;
-}
-
 // Helper classes
 
 .hidden {
@@ -53,16 +23,6 @@ pre, span.code {
 
 strong {
 	font-weight: bold;
-}
-
-li {
-	padding-left: @page-line-height;
-	&:before {
-		content: "—"; 
-		padding-right: 5px;
-		position: relative;
-		top: -1px;
-	}
 }
 
 a, p, label {
